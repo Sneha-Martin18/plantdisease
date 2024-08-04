@@ -1,0 +1,77 @@
+{%include 'adminheader.html'%}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light turquoise blue */
+        }
+
+        form {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h2 {
+            color: #009970; /* Turquoise green */
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            background-color: #e0f7f0; /* Light turquoise green */
+            border: 1px solid #009970; /* Turquoise green */
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #009970; /* Turquoise green */
+        }
+
+        th {
+            background-color: #009970; /* Turquoise green */
+            color: white;
+        }
+
+        input[type="text"], input[type="submit"] {
+            padding: 8px;
+            border: 1px solid #009970; /* Turquoise green */
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #009970; /* Turquoise green */
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00755e; /* Darker Turquoise green on hover */
+        }
+    </style>
+</head>
+<body>
+<center>
+    <form method='post'>
+        <table>
+            <h2>Reply</h2>
+            <tr>
+                <th>Reply</th>
+                <td><input type="text" name="rep"></td>
+            </tr>
+            <tr>
+                <th>Submit</th>
+                <td><input type="submit" name="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>
+
+
+{%include 'footer.html'%}

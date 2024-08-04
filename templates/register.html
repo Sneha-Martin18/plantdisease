@@ -1,0 +1,148 @@
+{% include 'header.html' %}
+
+ <section id="hero" class="d-flex align-items-center" style="height:300px">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+    </div>
+  </section><!-- End Hero -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+      <h1>Cultivating health Cultivating success</h1>
+      <h2>Not a part of Botanica? Register below</h2>
+
+    </div>
+  </section><!-- End Hero -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        form {
+            margin-bottom: 90px;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 70px; /* Adjusted padding */
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #20b2aa; /* Turquoise Green */
+            margin-bottom: 10px;
+            font-weight: bolder;
+        }
+
+        th, td {
+            padding: 10px; /* Adjusted padding */
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #20b2aa; /* Turquoise Green */
+            color: white;
+        }
+
+        input[type="text"],
+        input[type="phone"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 5px; /* Adjusted padding */
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            background-color: #20b2aa; /* Turquoise Green */
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1c958b; /* Darker shade of Turquoise Green on hover */
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+    <center>
+        <form method='post'>
+            <table>
+                <h2>Register</h2>
+                <tr>
+                    <th>First Name</th>
+                    <td><input type="text" required name="fname"></td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td><input type="text" required name="lname"></td>
+                </tr>
+                <tr>
+                    <th>Place</th>
+                    <td><input type="text" required name="place"></td>
+                </tr>
+                <tr>
+                    <th>Phone</th>
+                    <td><input type="tel" pattern="\d{10}" required name="phno" title="Please enter a 10-digit mobile number"></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required name="email" title="Please enter a valid mail id"></td>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <td><input type="text" name="uname"></td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td><input type="password" pattern=".{7,}" required name="pwd" title="Password must be at least 7 characters long"></td>
+                </tr>
+                <tr>
+                    <th>Submit</th>
+                    <td><input type="submit" name="submit" value="Register"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+
+</html>
+
+
+
+{% include 'footer.html' %}

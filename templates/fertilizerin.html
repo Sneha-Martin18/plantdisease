@@ -1,0 +1,142 @@
+{% include 'adminheader.html' %}
+
+<section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+      <h1>Your New Online Presence with Bethany</h1>
+      <h2>We are team of talented designers making websites with Bootstrap</h2>
+    
+    </div>
+  </section><!-- End Hero -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light turquoise blue */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 80px;
+        }
+
+        th, td {
+            border: 1px solid #009970; /* Turquoise green */
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #009970; /* Turquoise green */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e0f7f0; /* Light turquoise green */
+        }
+
+        tr:hover {
+            background-color: #b5eee2; /* Hover color - Light aqua */
+        }
+
+        form {
+            text-align: center;
+        }
+
+        h2 {
+            color: #009970; /* Turquoise green */
+            margin-top: 150px;
+        }
+
+        input[type="text"], input[type="submit"] {
+            padding: 6px;
+            border: 1px solid #009970; /* Turquoise green */
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        input[type="submit"] {
+            background-color: #009970; /* Turquoise green */
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00755e; /* Darker Turquoise green on hover */
+        }
+    </style>
+</head>
+<body>
+{% if data['up'] %}
+<center>
+    <form method='post'>
+        <table>
+            <h2>Fertilizer Insertion</h2>
+            <tr>
+                <th>Disease</th>
+                <td><input type="text" required name="dis" value="{{data['up'][0]['disease']}}"></td>
+            </tr>
+            <tr>
+                <th>Fertilizer</th>
+                <td><input type="text" required name="ferti" value="{{data['up'][0]['fertilizers']}}"></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td><input type="text" name="des" value="{{data['up'][0]['description']}}"></td>
+            </tr>
+            <tr>
+                <th>Submit</th>
+                <td><input type="submit" name="update" value="Update"></td>
+            </tr>
+        </table>
+    </form>
+</center>
+{% else %}
+<center>
+    <form method='post'>
+        <table>
+            <h2>Fertilizer Insertion</h2>
+            <tr>
+                <th>Disease</th>
+                <td><input type="text" name="dis"></td>
+            </tr>
+            <tr>
+                <th>Fertilizer</th>
+                <td><input type="text" name="ferti"></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td><input type="text" name="des"></td>
+            </tr>
+            <tr>
+                <th>Submit</th>
+                <td><input type="submit" name="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</center>
+{% endif %}
+<table>
+    <tr>
+        <th>Disease</th>
+        <th>Fertilizer</th>
+        <th>Description</th>
+    </tr>
+    {% for i in data['cview'] %}
+    <tr>
+        <td>{{ i['disease'] }}</td>
+        <td>{{ i['fertilizers'] }}</td>
+        <td>{{ i['description'] }}</td>
+        <td><a href="?action=update&fertid={{i['ferid']}}" style="color: #009970;">Update</a></td>
+        <td><a href="?action=delete&fertid={{i['ferid']}}" style="color: #009970;">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+
+		
+
+{% include 'footer.html' %}

@@ -1,0 +1,90 @@
+{% include 'fheader.html' %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaint Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* White background */
+  }
+
+  center {
+    margin-top: 150px; /* Adjusted margin-top */
+  }
+
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    background-color: #d2ecf7; /* Light Blue */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #888888; /* Box shadow for depth */
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2; /* Turquoise Blue */
+    color: turquoise;
+    border-top-left-radius: 10px; /* Rounded corners for table header */
+    border-top-right-radius: 10px;
+  }
+
+  input[type="text"], input[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: calc(100% - 20px); /* Adjusted input width */
+    box-sizing: border-box;
+    margin: 6px 0;
+    transition: border-color 0.3s;
+  }
+
+  input[type="text"]:focus {
+    border-color: #f2f2f2; /* Focus color change */
+    outline: none;
+  }
+
+  input[type="submit"] {
+    background-color: #40e0d0; /* Turquoise Blue */
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #20b2aa; /* Darker Turquoise Blue on hover */
+  }
+</style>
+</head>
+<body>
+<center>
+  <form method='post'>
+    <table>
+      <tr>
+        <th colspan="2" style="background-color: #40e0d0;"><h2 style="color: white;">Complaint</h2></th>
+      </tr>
+      <tr>
+        <th>Complaint</th>
+        <td><input type="text" required name="comp"></td>
+      </tr>
+      <tr>
+        <th colspan="2"><input type="submit" name="submit" value="Submit"></th>
+      </tr>
+    </table>
+  </form>
+</center>
+</body>
+</html>
+
+
+{% include 'ffooter.html' %}

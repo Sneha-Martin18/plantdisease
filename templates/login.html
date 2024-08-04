@@ -1,0 +1,114 @@
+{% include 'header.html' %}
+
+ <section id="hero" class="d-flex align-items-center" style="height:300px">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+    </div>
+  </section><!-- End Hero -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+      <h1>Uncover the secrets of healthy harvest.</h1>
+      <h2>Want to check again? Login below .</h2>
+    </div>
+  </section><!-- End Hero -->
+
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        form {
+            margin-bottom: 90px;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #20b2aa; /* Turquoise Green */
+            margin-bottom: 10px;
+            font-weight: bold; /* Making the text bold */
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            color: #20b2aa; /* Turquoise Green */
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            border: none;
+            background-color: #20b2aa; /* Turquoise Green */
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1c958b; /* Darker shade of Turquoise Green on hover */
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form method='post'>
+            <table class="table table-success table-striped" style="max-width: 400px">
+                <h2>Login</h2>
+                <tr>
+                    <th><label for="uname">Username:</label></th>
+                    <td><input type="text" name="uname" id="uname" class="form-control" required></td>
+                </tr>
+                <tr>
+                     <th><label for="pwd">Password:</label></th>
+                    <td><input type="password" name="pwd" id="pwd" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><input type="submit" name="submit" value="Login"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
+
+
+
+{% include 'footer.html' %}

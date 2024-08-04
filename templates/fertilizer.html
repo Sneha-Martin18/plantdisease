@@ -1,0 +1,73 @@
+{% include 'fheader.html' %}
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disease and Fertilizer Table</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Light gray background */
+  }
+
+  table {
+    width: `100%;
+    border-collapse: collapse;
+    margin-top: 100px; /* Added margin-top */
+    margin-bottom: 60px;
+  }
+
+  th, td {
+    border: 5px solid #ddd;
+    padding: 40px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #40E0D0; /* Turquoise blue */
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray */
+  }
+
+  tr:hover {
+    background-color: #ddd; /* Gray on hover */
+  }
+
+  a {
+    text-decoration: none;
+    color: #40E0D0; /* Turquoise blue */
+  }
+
+  a:hover {
+    color: #008080; /* Darker turquoise on hover */
+  }
+</style>
+</head>
+<body>
+<!-- Added space above the table -->
+<div style="margin-top: 20px;"></div>
+<table>
+  <tr>
+    <th>Disease</th>
+    <th>Fertilizer</th>
+    <th>Description</th>
+    <th>Upload</th>
+  </tr>
+  {% for i in data['cview'] %}
+  <tr>
+    <td>{{ i['disease'] }}</td>
+    <td>{{ i['fertilizers'] }}</td>
+    <td>{{ i['description'] }}</td>
+    <td><a href="Fupload?fertid={{ i['ferid'] }}">Upload</a></td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
+
+
+{% include 'ffooter.html' %}
